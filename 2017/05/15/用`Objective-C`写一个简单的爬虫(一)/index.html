@@ -86,13 +86,22 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="用Objective-C写一个简单的爬虫   你是不是想写个爬虫来抓取点东西,但是你又不会Python或者别的语言，那么你就得感谢你自己能来到这里。接下来就交给你如何用Objective-C写一个爬虫。   什么？Objective-C也能写爬虫？不都是Python才可以的么？那么我告诉你基本上大部分语言都是可以写爬虫的，只是Python用来写爬虫比较方便，他有海量的三方库可以让开发者调用而已。而">
+<meta property="og:type" content="article">
 <meta property="og:title" content="iCloudys">
-<meta property="og:url" content="https://icloudys.github.io/index.html">
+<meta property="og:url" content="https://icloudys.github.io/2017/05/15/用`Objective-C`写一个简单的爬虫(一)/index.html">
 <meta property="og:site_name" content="iCloudys">
+<meta property="og:description" content="用Objective-C写一个简单的爬虫   你是不是想写个爬虫来抓取点东西,但是你又不会Python或者别的语言，那么你就得感谢你自己能来到这里。接下来就交给你如何用Objective-C写一个爬虫。   什么？Objective-C也能写爬虫？不都是Python才可以的么？那么我告诉你基本上大部分语言都是可以写爬虫的，只是Python用来写爬虫比较方便，他有海量的三方库可以让开发者调用而已。而">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://icloudys.github.io/Users/mac/Desktop/1522319279578.jpg%20=100x100">
+<meta property="og:image" content="https://icloudys.github.io/2017/05/15/用%60Objective-C%60写一个简单的爬虫(一)/1522319389625%20=100x100">
+<meta property="og:image" content="https://icloudys.github.io/2017/05/15/用%60Objective-C%60写一个简单的爬虫(一)/1522385994968%20=100x100">
+<meta property="og:image" content="https://icloudys.github.io/2017/05/15/用%60Objective-C%60写一个简单的爬虫(一)/1522386479145">
+<meta property="og:updated_time" content="2018-04-03T05:05:20.904Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iCloudys">
+<meta name="twitter:description" content="用Objective-C写一个简单的爬虫   你是不是想写个爬虫来抓取点东西,但是你又不会Python或者别的语言，那么你就得感谢你自己能来到这里。接下来就交给你如何用Objective-C写一个爬虫。   什么？Objective-C也能写爬虫？不都是Python才可以的么？那么我告诉你基本上大部分语言都是可以写爬虫的，只是Python用来写爬虫比较方便，他有海量的三方库可以让开发者调用而已。而">
+<meta name="twitter:image" content="https://icloudys.github.io/Users/mac/Desktop/1522319279578.jpg%20=100x100">
 
 
 
@@ -122,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://icloudys.github.io/"/>
+  <link rel="canonical" href="https://icloudys.github.io/2017/05/15/用`Objective-C`写一个简单的爬虫(一)/"/>
 
 
 
 
 
-  <title>iCloudys</title>
+  <title> | iCloudys</title>
   
 
 
@@ -157,8 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/iCloudys">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
@@ -269,153 +277,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://icloudys.github.io/2018/03/09/我的第一篇博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="iCloudys">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="iCloudys">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/09/我的第一篇博客/" itemprop="url">我的第一篇博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-09T14:45:10+08:00">
-                2018-03-09
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-20T18:07:47+08:00">
-                2018-03-20
-              </time>
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <html><br>    <body><br>        <center><br>            <h3>春江花月夜</h3><br>            <author><tag>【作者】</tag><a href="https://baike.baidu.com/item/张若虚/330234?fr=aladdin" target="_blank" rel="noopener">张若虚</a> <tag>【朝代】</tag>唐 译文对照</author><br>            春江潮水连海平，海上明月共潮生。滟滟随波千万里，何处春江无月明！
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/09/我的第一篇博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-        
-    </div>
-
-    <div>
-        
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -445,9 +309,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/15/用`Objective-C`写一个简单的爬虫(一)/" itemprop="url">未命名</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -491,6 +353,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 阅读次数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -509,9 +376,7 @@
       
 
       
-        
-          
-            <p>用<code>Objective-C</code>写一个简单的爬虫  </p>
+        <p>用<code>Objective-C</code>写一个简单的爬虫  </p>
 <p>你是不是想写个爬虫来抓取点东西,但是你又不会<code>Python</code>或者别的语言，那么你就得感谢你自己能来到这里。接下来就交给你如何用<code>Objective-C</code>写一个爬虫。  </p>
 <p>什么？<code>Objective-C</code>也能写爬虫？不都是<code>Python</code>才可以的么？那么我告诉你基本上大部分语言都是可以写爬虫的，只是<code>Python</code>用来写爬虫比较方便，他有海量的三方库可以让开发者调用而已。而别的语言基本上就是靠自己苦逼的撸了。  </p>
 <p>那么用<code>Objective-C</code>写爬虫有什么用？靠iPhone来爬数据么？这里博主只是写个简单的爬虫而已，并不指望用此来专门抓取数据，你觉得让手机去爬数据能爬多少啊。本教程会兼容Mac软件开发，你可以用此技术开发mac爬虫工具。  </p>
@@ -546,8 +411,6 @@
 <p>我们再说说中间的<code>.+?</code>,<code>.</code>代表单个字符，比如正则表达式这样写<code>http://..jpg</code>我们只能提取<code>http://a.jpg</code>这中间只有单个字符的<code>url</code>。那如果我们想提取中间个数不确定的呢？比如<code>http://abc.jpg</code>?我们就在<code>.</code>后面加个<code>+</code>即可；<code>+</code>表示大于等于1个，比如<code>http://.+.jpg</code>我们既可以匹配到<code>http://a.jpg</code>也可匹配到<code>http://aaa.jpg</code>等中间多个字符的<code>url</code>。</p>
 <p>那么后面的<code>?</code>呢,这里的<code>?</code>多代表的是非贪婪匹配，举个例子:<code>http://aa.jpg.jpg</code>像这种<code>url</code>我们该怎么提取呢，如果按照刚才<code>http://.+.jpg</code>的表达式匹配出来的是<code>http://aa.jpg.jpg</code>整个串，但是我们只想提取到<code>http://aa.jpg</code>怎么办，我们就在<code>+</code>后面加个<code>?</code>代表尽可能少的匹配，就是所谓的非贪婪匹配。</p>
 
-          
-        
       
     </div>
     
@@ -556,9 +419,20 @@
 
     <div>
         
+        
+
+
+        
     </div>
 
     <div>
+        
+        <div>
+    
+    <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+    
+</div>
+
         
     </div>
 
@@ -566,18 +440,52 @@
 
     
 
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    iCloudys
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://icloudys.github.io/2017/05/15/用`Objective-C`写一个简单的爬虫(一)/" title="">https://icloudys.github.io/2017/05/15/用`Objective-C`写一个简单的爬虫(一)/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/09/我的第一篇博客/" rel="prev" title="我的第一篇博客">
+                我的第一篇博客 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -587,10 +495,37 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -598,6 +533,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTAzMy8xMTU2OQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -837,6 +781,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -865,6 +813,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
