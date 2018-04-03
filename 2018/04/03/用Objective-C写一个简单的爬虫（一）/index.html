@@ -88,22 +88,23 @@
 
 <meta name="description" content="你是不是想写个爬虫来抓取点东西,但是你又不会Python或者别的语言，那么你就得感谢你自己能来到这里。接下来就交给你如何用Objective-C写一个爬虫。   什么？Objective-C也能写爬虫？不都是Python才可以的么？那么我告诉你基本上大部分语言都是可以写爬虫的，只是Python用来写爬虫比较方便，他有海量的三方库可以让开发者调用而已。而别的语言基本上就是靠自己苦逼的撸了。   那么">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用Objective-C写一个简单的爬虫(一)">
-<meta property="og:url" content="https://icloudys.github.io/2018/04/03/用`Objective-C`写一个简单的爬虫(一)/index.html">
+<meta property="og:title" content="用Objective-C写一个简单的爬虫（一）">
+<meta property="og:url" content="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/index.html">
 <meta property="og:site_name" content="iCloudys">
 <meta property="og:description" content="你是不是想写个爬虫来抓取点东西,但是你又不会Python或者别的语言，那么你就得感谢你自己能来到这里。接下来就交给你如何用Objective-C写一个爬虫。   什么？Objective-C也能写爬虫？不都是Python才可以的么？那么我告诉你基本上大部分语言都是可以写爬虫的，只是Python用来写爬虫比较方便，他有海量的三方库可以让开发者调用而已。而别的语言基本上就是靠自己苦逼的撸了。   那么">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用%60Objective-C%60写一个简单的爬虫(一)/images/1522319279578.jpg%20=100x100">
-<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用%60Objective-C%60写一个简单的爬虫(一)/1522319389625%20=100x100">
-<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用%60Objective-C%60写一个简单的爬虫(一)/1522385994968%20=100x100">
-<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用%60Objective-C%60写一个简单的爬虫(一)/1522386479145">
-<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用%60Objective-C%60写一个简单的爬虫(一)/1522567101198">
-<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用%60Objective-C%60写一个简单的爬虫(一)/输入html源码">
-<meta property="og:updated_time" content="2018-04-03T05:22:23.280Z">
+<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522319389625.jpg">
+<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522319279578.jpg">
+<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522385994968.jpg">
+<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522386479145.jpg">
+<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522567101198.jpg">
+<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522744373114.jpg">
+<meta property="og:image" content="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/QQ20180403-163847.gif">
+<meta property="og:updated_time" content="2018-04-03T09:16:54.104Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用Objective-C写一个简单的爬虫(一)">
+<meta name="twitter:title" content="用Objective-C写一个简单的爬虫（一）">
 <meta name="twitter:description" content="你是不是想写个爬虫来抓取点东西,但是你又不会Python或者别的语言，那么你就得感谢你自己能来到这里。接下来就交给你如何用Objective-C写一个爬虫。   什么？Objective-C也能写爬虫？不都是Python才可以的么？那么我告诉你基本上大部分语言都是可以写爬虫的，只是Python用来写爬虫比较方便，他有海量的三方库可以让开发者调用而已。而别的语言基本上就是靠自己苦逼的撸了。   那么">
-<meta name="twitter:image" content="https://icloudys.github.io/2018/04/03/用%60Objective-C%60写一个简单的爬虫(一)/images/1522319279578.jpg%20=100x100">
+<meta name="twitter:image" content="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522319389625.jpg">
 
 
 
@@ -133,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="https://icloudys.github.io/2018/04/03/用`Objective-C`写一个简单的爬虫(一)/"/>
+  <link rel="canonical" href="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/"/>
 
 
 
 
 
-  <title>用Objective-C写一个简单的爬虫(一) | iCloudys</title>
+  <title>用Objective-C写一个简单的爬虫（一） | iCloudys</title>
   
 
 
@@ -294,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://icloudys.github.io/2018/04/03/用`Objective-C`写一个简单的爬虫(一)/">
+    <link itemprop="mainEntityOfPage" href="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="iCloudys">
@@ -311,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用Objective-C写一个简单的爬虫(一)</h1>
+          <h1 class="post-title" itemprop="name headline">用Objective-C写一个简单的爬虫（一）</h1>
         
 
         <div class="post-meta">
@@ -323,7 +324,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-03T14:45:10+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-03T15:29:18+08:00">
                 2018-04-03
               </time>
             
@@ -339,7 +340,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-03T13:22:23+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-03T17:16:54+08:00">
                 2018-04-03
               </time>
             
@@ -380,66 +381,64 @@
       
         <p>你是不是想写个爬虫来抓取点东西,但是你又不会<code>Python</code>或者别的语言，那么你就得感谢你自己能来到这里。接下来就交给你如何用<code>Objective-C</code>写一个爬虫。  </p>
 <p>什么？<code>Objective-C</code>也能写爬虫？不都是<code>Python</code>才可以的么？那么我告诉你基本上大部分语言都是可以写爬虫的，只是<code>Python</code>用来写爬虫比较方便，他有海量的三方库可以让开发者调用而已。而别的语言基本上就是靠自己苦逼的撸了。  </p>
-<p>那么用<code>Objective-C</code>写爬虫有什么用？靠iPhone来爬数据么？这里博主只是写个简单的爬虫而已，并不指望用此来专门抓取数据，你觉得让手机去爬数据能爬多少啊。本教程会兼容Mac软件开发，你可以用此技术开发mac爬虫工具。  </p>
-<a id="more"></a>
-<p>–  </p>
+<p>那么用<code>Objective-C</code>写爬虫有什么用？靠iPhone来爬数据么？这里博主只是写个简单的爬虫而已，并不指望用此来专门抓取数据，你觉得让手机去爬数据能爬多少啊。本教程会兼容Mac软件开发，你可以用此技术开发mac爬虫工具。<br><a id="more"></a>  </p>
 <p>废话少说，让我们来开始吧！  </p>
-<p>必备工具：  </p>
-<ul>
+<h3 id="必备工具"><a href="#必备工具" class="headerlink" title="必备工具"></a>必备工具</h3><ul>
 <li>链接网络的Mac,黑苹果也可以</li>
 <li>浏览器，推荐用Google Chrome</li>
 <li>Xcode开发工具  </li>
 </ul>
-<p>必备技能：  </p>
-<ul>
+<h3 id="必备技能"><a href="#必备技能" class="headerlink" title="必备技能"></a>必备技能</h3><ul>
 <li>熟悉<code>Objective-C</code></li>
 <li>能阅读<a href="http://www.runoob.com/html/html-tutorial.html" target="_blank" rel="noopener">HTML</a>,能认识基本的标签即可</li>
 <li><a href="http://www.runoob.com/regexp/regexp-tutorial.html" target="_blank" rel="noopener">正则表达式</a>,大概浏览一下就行,这里在遇到的时候博主会简单介绍一下  </li>
 </ul>
-<p>本篇目标：  </p>
-<ul>
+<h3 id="本篇目标"><a href="#本篇目标" class="headerlink" title="本篇目标"></a>本篇目标</h3><ul>
 <li>抓取<a href="https://www.enterdesk.com/" target="_blank" rel="noopener">回车桌面</a>上的图片</li>
-<li>附图:<img src="./images/1522319279578.jpg =100x100" alt=""><img src="1522319389625 =100x100" alt=""></li>
+<li>附图:<br><img src="/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522319389625.jpg"><br><img src="/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522319279578.jpg" width="30%/">   </li>
 </ul>
-<p>–  </p>
-<p>一、分析网站<br>用浏览器打开<a href="https://www.enterdesk.com/" target="_blank" rel="noopener">回车桌面</a>,并且按下 <code>option</code> + <code>command</code> + <code>i</code>打开开发者工具。<br>如图:<img src="1522385994968 =100x100" alt=""><br>确保右上方是选中的<code>Elements</code>选项，下面<code>HTML</code>就是网页的源代码。鼠标在<code>HTML</code>上面移动的时候左侧页面会有相应的模块提示，我们以次点开标签，就能找到想要的图片地址: </p>
-<p><img src="1522386479145" alt=""><br>粘一段代码:  </p>
+<h3 id="分析网页"><a href="#分析网页" class="headerlink" title="分析网页"></a>分析网页</h3><p>用浏览器打开<a href="https://www.enterdesk.com/" target="_blank" rel="noopener">回车桌面</a>,并且按下 <code>option</code> + <code>command</code> + <code>i</code>打开开发者工具。<br>如图:<br><img src="/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522385994968.jpg">  </p>
+<p>确保右上方是选中的<code>Elements</code>选项，下面<code>HTML</code>就是网页的源代码。鼠标在<code>HTML</code>上面移动的时候左侧页面会有相应的模块提示，我们以次点开标签，就能找到想要的图片地址: </p>
+<p>如图:  </p>
+<p><img src="/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522386479145.jpg"></p>
+<p>粘一段代码:  </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;img a_width=<span class="string">"576"</span> a_height=<span class="string">"360"</span> </span><br><span class="line">	src=<span class="string">"https://up.enterdesk.com/edpic_360_360/cf/e1/8f/cfe18f5a7e0a42355784bb992f313853.jpg"</span> </span><br><span class="line">	alt=<span class="string">"清明节气"</span> </span><br><span class="line">	title=<span class="string">"清明节气"</span> 		</span><br><span class="line">	style=<span class="string">"height: 185px; width: 296px;"</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-<p>上段代码中<code>src</code>就是网页中的图片地址，我们接下来就是把这个<code>src</code>的值提取出来。  </p>
-<p>–  </p>
-<p>二、撸代码  </p>
-<p>上面我们分析了网页源码，接下来我们已经知道了大致流程：  </p>
+<p>上段代码中<code>src</code>就是网页中的图片地址，我们接下来就是把这个<code>src</code>的值提取出来。   </p>
+<h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>上面我们分析了网页源码，接下来我们已经知道了大致流程：  </p>
 <ul>
 <li>获取网页源码</li>
 <li>正则提取<code>url</code>  </li>
 </ul>
-<p>好! 让我们来创建一个<code>Objective-C</code>项目，这里我们主要是来介绍如何写爬虫，至于<code>Objective-C</code>项目自己创建即可。<br>第一步<br>博主这里在主控制器上面添加一个<code>UITextView</code>，<br>背景色为黑色；<br>Tint 颜色为绿色，(这样的颜色看起来比较高大上一点)；<br>不可编辑；<br>打开连接功能；<br>并且连接到所在的控制器。<br>如图:<br><img src="1522567101198" alt="">  </p>
-<p>第二步<br>创建<code>Spider</code>类和<code>SpiderOption</code>类。<br><code>Spider</code>是爬虫工具类;<br><code>SpiderOption</code>是参数类，在爬数据过程中所需要的参数都由<code>SpiderOption</code>传递给<code>Spider</code>  </p>
+<p>好! 让我们来创建一个<code>Objective-C</code>项目，这里我们主要是来介绍如何写爬虫，至于<code>Objective-C</code>项目自己创建即可。  </p>
+<h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><p>博主这里在主控制器上面添加一个<code>UITextView</code>，<br>背景色为黑色；<br>Tint 颜色为绿色，(这样的颜色看起来比较高大上一点)；<br>不可编辑；<br>打开超连接功能；<br>并且连接到所在的控制器。<br>如图:  </p>
+<p><img src="/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522567101198.jpg">  </p>
+<h4 id="创建工具类"><a href="#创建工具类" class="headerlink" title="创建工具类"></a>创建工具类</h4><p>创建<code>Spider</code>类和<code>SpiderOption</code>类。<br><code>Spider</code>是爬虫工具类;<br><code>SpiderOption</code>是参数类，在爬数据过程中所需要的参数都由<code>SpiderOption</code>传递给<code>Spider</code>  </p>
 <p><code>SpiderOption.h</code>  </p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;Foundation/Foundation.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">void</span>(^SpiderProgressHander)(<span class="built_in">NSString</span>* url);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SpiderOption</span> : <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 目标网站</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span>* website;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 抓取数据正则表达式</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span>* pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 抓取数据回调</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) SpiderProgressHander progress;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line">```  </span><br><span class="line">`Spider.h`  </span><br><span class="line"></span><br><span class="line">```objc  </span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;Foundation/Foundation.h&gt;</span></span></span><br><span class="line"><span class="meta">#import <span class="meta-string">"SpiderOption.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">Spider</span> : <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 参数类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>, <span class="keyword">readonly</span>) SpiderOption* option;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 初始化方法</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> @param option 参数类</span></span><br><span class="line"><span class="comment"> @return self</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">- (<span class="keyword">instancetype</span>)initWithOption:(SpiderOption*)option;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 开始抓取</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">- (<span class="keyword">void</span>)start;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
 <p><code>Spider.m</code>  </p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">"Spider.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">Spider</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">instancetype</span>)initWithOption:(SpiderOption *)option&#123;</span><br><span class="line">    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</span><br><span class="line">        _option = option;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)start&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-<p>第三步<br>经过第二步之后，初步的爬虫工具就可以使用了，下面我们在<code>ViewController.m</code>里面调用我们的爬虫工具。  </p>
+<h4 id="测试工具类"><a href="#测试工具类" class="headerlink" title="测试工具类"></a>测试工具类</h4><p>经过第二步之后，初步的爬虫工具就可以使用了，下面我们在<code>ViewController.m</code>里面调用我们的爬虫工具。  </p>
 <p><code>ViewController.m</code>  </p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></span><br><span class="line"><span class="meta">#import <span class="meta-string">"Spider.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UITextView</span> *textView;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>, <span class="keyword">nonatomic</span>) Spider *spider;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//初始化一个参数类</span></span><br><span class="line">    SpiderOption* option = [[SpiderOption alloc] init];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//准备目标网址</span></span><br><span class="line">    option.website = <span class="string">@"https://www.enterdesk.com"</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//处理回调，当成功抓取一个内容之后，我们就把他拼接到textView的底部</span></span><br><span class="line">    option.progress = ^(<span class="built_in">NSString</span> *url) &#123;</span><br><span class="line">        [<span class="keyword">self</span> showLogs:url];</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//初始化爬虫类</span></span><br><span class="line">    <span class="keyword">self</span>.spider = [[Spider alloc] initWithOption:option];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//开始抓取</span></span><br><span class="line">    [<span class="keyword">self</span>.spider start];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)showLogs:(<span class="built_in">NSString</span>*)log&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//把Log内容拼接到textView最下面，并且滚动到最下面</span></span><br><span class="line">    <span class="keyword">if</span> (log.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        [<span class="keyword">self</span>.textView insertText:[<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%@\n\n"</span>,log]];</span><br><span class="line">        [<span class="keyword">self</span>.textView scrollRangeToVisible:<span class="built_in">NSMakeRange</span>(<span class="keyword">self</span>.textView.text.length, <span class="number">0</span>)];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-<p>现在来运行一下我们的项目，不会报错，但是并没有开始爬什么数据，接下让我们来完善我们的<code>Spider</code>工具类。</p>
-<p>第四步  </p>
-<p>在我们的<code>Spider.m</code>里面添加一个方法，来获取网页的<code>HTML</code>源码：  </p>
+<p>现在来运行一下我们的项目，虽然不会报错，但是并没有开始爬什么数据，接下让我们来完善我们的<code>Spider</code>工具类。</p>
+<h4 id="完善工具类"><a href="#完善工具类" class="headerlink" title="完善工具类"></a>完善工具类</h4><p>在我们的<code>Spider.m</code>里面添加一个方法，来获取网页的<code>HTML</code>源码：  </p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)htmlWithURLString:(<span class="built_in">NSString</span>*)urlString&#123;</span><br><span class="line">    </span><br><span class="line">    WeakSelf;</span><br><span class="line">    <span class="built_in">NSURL</span>* url = [<span class="built_in">NSURL</span> URLWithString:urlString];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSURLSessionConfiguration</span>* configuration = [<span class="built_in">NSURLSessionConfiguration</span> defaultSessionConfiguration];</span><br><span class="line">    <span class="built_in">NSURLSession</span>* session = [<span class="built_in">NSURLSession</span> sessionWithConfiguration:configuration];</span><br><span class="line">    <span class="built_in">NSURLSessionDataTask</span>* task = [session dataTaskWithURL:url</span><br><span class="line">                                        completionHandler:^(<span class="built_in">NSData</span> * _Nullable data, <span class="built_in">NSURLResponse</span> * _Nullable response, <span class="built_in">NSError</span> * _Nullable error) &#123;</span><br><span class="line">                                            <span class="keyword">if</span> (!error) &#123;</span><br><span class="line">                                                <span class="built_in">NSString</span>* html = [[<span class="built_in">NSString</span> alloc] initWithData:data encoding:<span class="built_in">NSUTF8StringEncoding</span>];</span><br><span class="line">                                                <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,html);</span><br><span class="line">                                            &#125;</span><br><span class="line">                                        &#125;];</span><br><span class="line">    </span><br><span class="line">    [task resume];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>接下来在我们的<code>start</code>方法调用上述方法: </p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)start&#123;</span><br><span class="line">    [<span class="keyword">self</span> htmlWithURLString:<span class="keyword">self</span>.option.website];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>让我们在运行一次项目，如果网络没有问题的话，我们就能看到控制器上面输出的<code>HTML</code>源码,尽管我们的<code>textView</code>还是黑黑的一片。如下图:<br><img src="输入html源码" alt="">  </p>
-<p>接下来就开始我们的最后一步: 正则匹配<br>我们再次给<code>Spider.m</code>添加一个方法,这个方法主要就是从<code>HTML</code>里面提取出我们想要的内容，比如我们的图片,然后回调给控制器:  </p>
+<p>让我们在运行一次项目，如果网络没有问题的话，我们就能看到控制器上面输出的<code>HTML</code>源码,尽管我们的<code>textView</code>还是黑黑的一片。如下图:  </p>
+<p><img src="/2018/04/03/用Objective-C写一个简单的爬虫（一）/1522744373114.jpg">  </p>
+<h4 id="正则匹配"><a href="#正则匹配" class="headerlink" title="正则匹配"></a>正则匹配</h4><p>我们再次给<code>Spider.m</code>添加一个方法,这个方法主要就是从<code>HTML</code>里面提取出我们想要的内容，比如我们的图片,然后回调给控制器:  </p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)matchesStringInHtml:(<span class="built_in">NSString</span>*)html&#123;</span><br><span class="line">    WeakSelf;</span><br><span class="line">        </span><br><span class="line">    <span class="built_in">NSRegularExpression</span>* expression = [<span class="built_in">NSRegularExpression</span> regularExpressionWithPattern:<span class="keyword">self</span>.option.pattern</span><br><span class="line">                                                                                options:<span class="built_in">NSRegularExpressionCaseInsensitive</span></span><br><span class="line">                                                                                  error:<span class="literal">nil</span>];</span><br><span class="line">    [expression enumerateMatchesInString:html</span><br><span class="line">                                 options:<span class="built_in">NSMatchingReportCompletion</span></span><br><span class="line">                                   range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, html.length)</span><br><span class="line">                              usingBlock:^(<span class="built_in">NSTextCheckingResult</span>* result, <span class="built_in">NSMatchingFlags</span> flags, <span class="built_in">BOOL</span>* stop) &#123;</span><br><span class="line">                                  <span class="built_in">dispatch_async</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">                                      <span class="built_in">NSString</span>* sub = [html substringWithRange:result.range];</span><br><span class="line">                                      weakSelf.option.progress ? weakSelf.option.progress(sub) : <span class="literal">nil</span>;</span><br><span class="line">                                  &#125;);</span><br><span class="line">                              &#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>我们还需要给<code>SpiderOption</code>的<code>pattern</code>赋值，那我们在<code>ViewController.m</code>里面添加以下正则即可：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">  option.website = <span class="string">@"https://www.enterdesk.com"</span>;</span><br><span class="line">  </span><br><span class="line">  option.pattern = <span class="string">@"https?://.+?.(jpg|png)"</span>;</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
 <p>最后，让我们运行以下看效果吧！！！  </p>
-<p>–</p>
-<p>我们来解释一下<code>https?://.+?.(jpg|png)</code>表达式的含义:  </p>
+<p><img src="/2018/04/03/用Objective-C写一个简单的爬虫（一）/QQ20180403-163847.gif">  </p>
+<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><p>我们来解释一下正则<code>https?://.+?.(jpg|png)</code>表达式的含义:  </p>
 <p><code>HTML</code>中的图片地址可能类似于<code>http://aaa.jpg</code>、又或者是以<code>https</code>开头的<code>https://aaa.jpg</code>,那我们就用<code>https?://aaa.jpg</code>即可匹配<code>http</code>也可匹配<code>https</code>。<code>?</code>在这里表示前一个字符<code>s</code>有0个或者1个。</p>
 <p>或许网页中的图片不仅仅是<code>.jpg</code>又或者是<code>.png</code>、<code>.gif</code>等等，我们用或<code>|</code>提取我们想要的格式图片。比如<code>.(jpg|png)</code>就是我们想取<code>jpg</code>或者是<code>png</code>的图片,如果你也想提取<code>.gif</code>的图片，可以这样写<code>.(jpg|png|gif)</code>即可。</p>
 <p>我们再说说中间的<code>.+?</code>,<code>.</code>代表单个字符，比如正则表达式这样写<code>http://..jpg</code>我们只能提取<code>http://a.jpg</code>这中间只有单个字符的<code>url</code>。那如果我们想提取中间个数不确定的呢？比如<code>http://abc.jpg</code>?我们就在<code>.</code>后面加个<code>+</code>即可；<code>+</code>表示大于等于1个，比如<code>http://.+.jpg</code>我们既可以匹配到<code>http://a.jpg</code>也可匹配到<code>http://aaa.jpg</code>等中间多个字符的<code>url</code>。</p>
-<p>那么后面的<code>?</code>呢,这里的<code>?</code>多代表的是非贪婪匹配，举个例子:<code>http://aa.jpg.jpg</code>像这种<code>url</code>我们该怎么提取呢，如果按照刚才<code>http://.+.jpg</code>的表达式匹配出来的是<code>http://aa.jpg.jpg</code>整个串，但是我们只想提取到<code>http://aa.jpg</code>怎么办，我们就在<code>+</code>后面加个<code>?</code>代表尽可能少的匹配，就是所谓的非贪婪匹配。</p>
+<p>那么后面的<code>?</code>呢,这里的<code>?</code>多代表的是非贪婪匹配，举个例子:<code>http://aa.jpg.jpg</code>像这种<code>url</code>我们该怎么提取呢，如果按照刚才<code>http://.+.jpg</code>的表达式匹配出来的是<code>http://aa.jpg.jpg</code>整个串，但是我们只想提取到<code>http://aa.jpg</code>怎么办，我们就在<code>+</code>后面加个<code>?</code>代表尽可能少的匹配，就是所谓的非贪婪匹配。  </p>
+<p>附上<a href="https://github.com/iCloudys/Spider" target="_blank" rel="noopener">项目源码</a>  </p>
 
       
     </div>
@@ -479,7 +478,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://icloudys.github.io/2018/04/03/用`Objective-C`写一个简单的爬虫(一)/" title="用Objective-C写一个简单的爬虫(一)">https://icloudys.github.io/2018/04/03/用`Objective-C`写一个简单的爬虫(一)/</a>
+    <a href="https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/" title="用Objective-C写一个简单的爬虫（一）">https://icloudys.github.io/2018/04/03/用Objective-C写一个简单的爬虫（一）/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -592,8 +591,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -649,6 +657,22 @@ var jiathis_config={
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#必备工具"><span class="nav-number">1.</span> <span class="nav-text">必备工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#必备技能"><span class="nav-number">2.</span> <span class="nav-text">必备技能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本篇目标"><span class="nav-number">3.</span> <span class="nav-text">本篇目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析网页"><span class="nav-number">4.</span> <span class="nav-text">分析网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编码"><span class="nav-number">5.</span> <span class="nav-text">编码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化"><span class="nav-number">5.1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建工具类"><span class="nav-number">5.2.</span> <span class="nav-text">创建工具类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试工具类"><span class="nav-number">5.3.</span> <span class="nav-text">测试工具类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完善工具类"><span class="nav-number">5.4.</span> <span class="nav-text">完善工具类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则匹配"><span class="nav-number">5.5.</span> <span class="nav-text">正则匹配</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备注"><span class="nav-number">6.</span> <span class="nav-text">备注</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
