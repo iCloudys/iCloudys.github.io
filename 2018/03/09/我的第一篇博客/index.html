@@ -796,7 +796,7 @@ var gitalk = new Gitalk({
                         repo: 'iCloudys.github.io',
                         owner: 'iCloudys',
                         admin: ['iCloudys'],
-                        id: location.pathname,
+                        id: '<%= page.date %>',
                         distractionFreeMode: 'true'
                         })
 gitalk.render('gitalk-container')
