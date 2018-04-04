@@ -313,6 +313,9 @@
           
 
   
+    <div id="gitalk-container"></div>
+
+  
 
 
 
@@ -596,6 +599,23 @@
 
 
 
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+var gitalk = new Gitalk({
+                        clientID: '10c26686f47a9fe8e71b',
+                        clientSecret: 'dad1294de8ba5edcc07b37270ef319550b1e8772',
+                        repo: 'icloudys.github.io',
+                        owner: 'icloudys',
+                        admin: ['m18301125620@163.com'],
+                        id: location.pathname,
+                        distractionFreeMode: 'true'
+                        })
+gitalk.render('gitalk-container')
+</script>
 
 
 
