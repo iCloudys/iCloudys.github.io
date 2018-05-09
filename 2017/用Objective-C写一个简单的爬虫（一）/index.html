@@ -100,7 +100,7 @@
 <meta property="og:image" content="https://icloudys.github.io/2017/用Objective-C写一个简单的爬虫（一）/1522567101198.jpg">
 <meta property="og:image" content="https://icloudys.github.io/2017/用Objective-C写一个简单的爬虫（一）/1522744373114.jpg">
 <meta property="og:image" content="https://icloudys.github.io/2017/用Objective-C写一个简单的爬虫（一）/QQ20180403-163847.gif">
-<meta property="og:updated_time" content="2018-04-29T04:18:39.658Z">
+<meta property="og:updated_time" content="2018-05-09T11:00:58.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Objective-C写一个简单的爬虫（一）">
 <meta name="twitter:description" content="你是不是想写个爬虫来抓取点东西,但是你又不会Python或者别的语言，那么你就得感谢你自己能来到这里。接下来就交给你如何用Objective-C写一个爬虫。   什么？Objective-C也能写爬虫？不都是Python才可以的么？那么我告诉你基本上大部分语言都是可以写爬虫的，只是Python用来写爬虫比较方便，他有海量的三方库可以让开发者调用而已。而别的语言基本上就是靠自己苦逼的撸了。   那么">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-29T12:18:39+08:00">
-                2018-04-29
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-09T19:00:58+08:00">
+                2018-05-09
               </time>
             
           </span>
@@ -443,7 +443,9 @@
 <p>我们再说说中间的<code>.+?</code>,<code>.</code>代表单个字符，比如正则表达式这样写<code>http://..jpg</code>我们只能提取<code>http://a.jpg</code>这中间只有单个字符的<code>url</code>。那如果我们想提取中间个数不确定的呢？比如<code>http://abc.jpg</code>?我们就在<code>.</code>后面加个<code>+</code>即可；<code>+</code>表示大于等于1个，比如<code>http://.+.jpg</code>我们既可以匹配到<code>http://a.jpg</code>也可匹配到<code>http://aaa.jpg</code>等中间多个字符的<code>url</code>。</p>
 <p>那么后面的<code>?</code>呢,这里的<code>?</code>多代表的是非贪婪匹配，举个例子:<code>http://aa.jpg.jpg</code>像这种<code>url</code>我们该怎么提取呢，如果按照刚才<code>http://.+.jpg</code>的表达式匹配出来的是<code>http://aa.jpg.jpg</code>整个串，但是我们只想提取到<code>http://aa.jpg</code>怎么办，我们就在<code>+</code>后面加个<code>?</code>代表尽可能少的匹配，就是所谓的非贪婪匹配。  </p>
 <p>最后在说一下<code>(?&lt;=(src=\&quot;))</code>这个意思就是我们要提取<code>src=&quot;</code>后面的<code>http:xx.jpg</code>的图片，但是不包含<code>src=&quot;</code>。举个🌰:如果把这个表达式去掉，我们会发现提取到的<code>url</code>有可能是这样<code>https://www.enterdesk.com/bizhi/5488.html\&quot;&gt;&lt;img src=\&quot;https://up.enterdesk.com/edpic_360_360/34/3f/f4/343ff4ada1548da0a81388f86dd9d1af.jpg</code>，很显然这不是我们想要的结果。所以说这个就是起到了相应的作用。</p>
-<p>附上<a href="https://github.com/iCloudys/Spider" target="_blank" rel="noopener">项目源码</a>  </p>
+<p>相关链接:  </p>
+<p><a href="https://github.com/iCloudys/Spider" target="_blank" rel="noopener">项目源码</a>  </p>
+<p><a href="../用Objective-C写一个简单的爬虫（二）">用Objective-C写一个简单的爬虫(二)</a></p>
 
       
     </div>
