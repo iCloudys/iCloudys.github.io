@@ -488,7 +488,7 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
     var gitment = new Gitment({
-      id: window.location.pathname,
+      id: (window.location.pathname.length < 50) ? window.location.pathname : "1489041910000",
       owner: 'iCloudys',
       repo: 'iCloudys.github.io',
       oauth: {
