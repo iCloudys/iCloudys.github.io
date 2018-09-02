@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="iCloudys">
 <meta property="og:description" content="基本信息孔**iOS开发超强的学习能力,超强的工作能力男 | 26岁 | 本科 | 4年工作经验 | 现居北京183****5620 | m183****5620@163.com  工作经历北京睿澎网络科技有限公司 2017.08 至 今iOS开发工程师    独立开发，研发公司承接的各种产品   负责产品的后期维护   负责业务需求讨论，确定需求范围，完成需求说明及需求分析工作   负责客户端">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-26T09:43:47.335Z">
+<meta property="og:updated_time" content="2018-09-02T14:53:13.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iCloudys">
 <meta name="twitter:description" content="基本信息孔**iOS开发超强的学习能力,超强的工作能力男 | 26岁 | 本科 | 4年工作经验 | 现居北京183****5620 | m183****5620@163.com  工作经历北京睿澎网络科技有限公司 2017.08 至 今iOS开发工程师    独立开发，研发公司承接的各种产品   负责产品的后期维护   负责业务需求讨论，确定需求范围，完成需求说明及需求分析工作   负责客户端">
@@ -404,7 +404,8 @@
 <li>实现远程推送，可以技术推送新闻等  </li>
 </ul>
 </blockquote>
-<h3 id="期望工作"><a href="#期望工作" class="headerlink" title="期望工作"></a>期望工作</h3><h4 id="iOS开发工程师-全职-北京"><a href="#iOS开发工程师-全职-北京" class="headerlink" title="iOS开发工程师 | 全职 | 北京"></a>iOS开发工程师 | 全职 | 北京</h4><h3 id="技能评价"><a href="#技能评价" class="headerlink" title="技能评价"></a>技能评价</h3><h3 id="专业技能"><a href="#专业技能" class="headerlink" title="专业技能"></a>专业技能</h3><blockquote>
+<h3 id="期望工作"><a href="#期望工作" class="headerlink" title="期望工作"></a>期望工作</h3><h4 id="iOS开发工程师-全职-北京"><a href="#iOS开发工程师-全职-北京" class="headerlink" title="iOS开发工程师 | 全职 | 北京"></a>iOS开发工程师 | 全职 | 北京</h4><h3 id="技能评价"><a href="#技能评价" class="headerlink" title="技能评价"></a>技能评价</h3><p><span class="total_plan"><br><em class="current_plan" style="width:90%;"></em><br></span></p>
+<h3 id="专业技能"><a href="#专业技能" class="headerlink" title="专业技能"></a>专业技能</h3><blockquote>
 <ul>
 <li>具有良好的编程风格,精通C/OC编程语言，熟悉数据结构，掌握基本算法  </li>
 <li>精通Cocoa Touch、UIKit 基础控件，能够独立封装自定义控件  </li>
@@ -441,18 +442,28 @@
 
 <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 
-<script>
-    function downloadPDF(){
-        bdhtml=window.document.body.innerHTML;  //获取到页面html
-        sprnstr="<!--startprint-->";
-        eprnstr="<!--endprint-->"; //找到两个标签
-        prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);
-        prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr)); //切除标签以外的东西
-        window.document.body.innerHTML=prnhtml;
-        window.print();
-        window.document.body.innerHTML=bdhtml;//将页面重新改回原始样式
+<p><script><br>    function downloadPDF(){<br>        bdhtml=window.document.body.innerHTML;  //获取到页面html<br>        sprnstr=”<!--startprint-->“;<br>        eprnstr=”<!--endprint-->“; //找到两个标签<br>        prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);<br>        prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr)); //切除标签以外的东西<br>        window.document.body.innerHTML=prnhtml;<br>        window.print();<br>        window.document.body.innerHTML=bdhtml;//将页面重新改回原始样式<br>    }<br></script></p>
+<style>
+    .total_plan{
+        background:#eee;
+        height:8px;
+        width:100%;
+        position:relative;
+        display:inline-block;
+        border-radius:4px;
+        overflow:hidden;
     }
-</script>
+
+    .current_plan{
+        height:100%;
+        position:absolute;
+        display:inline-block;
+        background: #00b88d;
+        left:0;
+        top:0;
+    }
+
+</style>
 
         
       </div>
@@ -478,7 +489,7 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
     var gitment = new Gitment({
-      id: (window.location.pathname.length < 50) ? window.location.pathname : "1535276627352",
+      id: (window.location.pathname.length < 50) ? window.location.pathname : "1535899994017",
       owner: 'iCloudys',
       repo: 'iCloudys.github.io',
       oauth: {
