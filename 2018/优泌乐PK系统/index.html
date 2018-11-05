@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content=".width-md{    width:50%;} 项目简介前些天公司接到一个在线PK的项目，用户需求是模仿微信小程序的《头脑王者》，不过会比这个简单些，题目是公司内部拟定好的，都是关于疾病之类的比如糖尿病、心脏病等等。还有就是项目是在微信公众号上跳转到的WEB页面，庆幸的是微信公众号开发我还是比较熟悉的，可怕的是用户强烈要求用C#语言，运行环境是Windows Server 2008 、IIS8">
+<meta property="og:type" content="article">
+<meta property="og:title" content=".NetPK系统">
+<meta property="og:url" content="https://icloudys.github.io/2018/优泌乐PK系统/index.html">
+<meta property="og:site_name" content="iCloudys">
+<meta property="og:description" content=".width-md{    width:50%;} 项目简介前些天公司接到一个在线PK的项目，用户需求是模仿微信小程序的《头脑王者》，不过会比这个简单些，题目是公司内部拟定好的，都是关于疾病之类的比如糖尿病、心脏病等等。还有就是项目是在微信公众号上跳转到的WEB页面，庆幸的是微信公众号开发我还是比较熟悉的，可怕的是用户强烈要求用C#语言，运行环境是Windows Server 2008 、IIS8">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/001.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/002.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/003.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/004.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/005.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/006.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/007.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/008.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/009.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/010.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/011.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/012.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/013.png">
+<meta property="og:image" content="https://icloudys.github.io/2018/优泌乐PK系统/014.png">
+<meta property="og:updated_time" content="2018-11-03T15:53:23.459Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=".NetPK系统">
+<meta name="twitter:description" content=".width-md{    width:50%;} 项目简介前些天公司接到一个在线PK的项目，用户需求是模仿微信小程序的《头脑王者》，不过会比这个简单些，题目是公司内部拟定好的，都是关于疾病之类的比如糖尿病、心脏病等等。还有就是项目是在微信公众号上跳转到的WEB页面，庆幸的是微信公众号开发我还是比较熟悉的，可怕的是用户强烈要求用C#语言，运行环境是Windows Server 2008 、IIS8">
+<meta name="twitter:image" content="https://icloudys.github.io/2018/优泌乐PK系统/001.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://icloudys.github.io/2018/优泌乐PK系统/"/>
+
+
+
+
+
+  <title>.NetPK系统 | iCloudys</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c73cb547161f1440450ea2b68a1f4e28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/iCloudys">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+    </a>
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">iCloudys</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">少小离家老大回，乡音无改鬓毛衰。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://icloudys.github.io/2018/优泌乐PK系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="iCloudys">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="iCloudys">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">.NetPK系统</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-28T22:20:25+08:00">
+                2018-07-28
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-03T23:53:23+08:00">
+                2018-11-03
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/优泌乐PK系统/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/优泌乐PK系统/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 阅读次数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><script><br>.width-md{<br>    width:50%;<br>}<br></script></p>
+<h3 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h3><p>前些天公司接到一个在线PK的项目，用户需求是模仿微信小程序的《头脑王者》，不过会比这个简单些，题目是公司内部拟定好的，都是关于疾病之类的比如糖尿病、心脏病等等。还有就是项目是在微信公众号上跳转到的<code>WEB</code>页面，庆幸的是微信公众号开发我还是比较熟悉的，可怕的是用户强烈要求用<code>C#</code>语言，运行环境是<code>Windows Server 2008 、IIS8、SQL Server 2008</code>，用户数量在<code>500</code>左右。好吧我承认我没有做过<code>C#</code>开发，不过还能回忆起遥远的过去在学校学的一点点可能有用的知识，对我来说这是一个挑战，不过好在用户数量很少，这是他们公司内部员工用的软件，真实哔了狗了。  </p>
+<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>根据和客户的对接内容，大概是想要一个前端程序和一个后台管理系统。基本功能为用户通过关注微信公众号之后可以点击链接进入到游戏中心。<br><a id="more"></a><br>其中前端主要包含以下四个模块：  </p>
+<ol>
+<li>王者训练场：用户平常练习的场所，每道题回答成功后会获得相应的分数。  </li>
+<li>全民PK：用户和用户之间PK的场所，里面包括实时PK和离线PK。  </li>
+<li>个人中心：可以查看自己的基本资料和得分情况。  </li>
+<li>排行榜：可以查看所有用户的排行情况以及自己的周排名和月排名。  </li>
+</ol>
+<p>后台主要包含以下四个模块：</p>
+<ol>
+<li>题库管理：用户可以查看和编辑题库。</li>
+<li>广告管理：所谓的广告就是用户在答题个过程中，在题目下发会显示一行文字广告。这里可以编辑广告内容。</li>
+<li>用户管理：管理参与答题的用户和查看答题情况，并每月或者每周提取前20名进行线下奖励，所以这里需要进行按月或者按周排序。</li>
+<li>PK管理：查看用户的PK情况以及用户在PK过程中参与答题的情况。</li>
+</ol>
+<p>根据以上描述大概整理了两个对应的脑图,我是业余的请忽略美观性：<br><img src="/2018/优泌乐PK系统/001.png" alt=""><br><img src="/2018/优泌乐PK系统/002.png" alt=""></p>
+<h3 id="基础设计"><a href="#基础设计" class="headerlink" title="基础设计"></a>基础设计</h3><ul>
+<li><p>前端：好在客户提供微信端的设计图，<code>PSD</code>格式的文件。我们开发者自己来切图即可，这样我们就省去了<code>UI</code>设计的时间，我们只是数据的搬运工。  </p>
+</li>
+<li><p>后台：后台只有一个管理员维护，对<code>UI</code>要求不高，方便操作即可，我想这是大部分管理后台的通用模式。  </p>
+</li>
+<li><p>开发环境：好吧，我只是<code>iOS</code>开发者，用的是<code>MacPro</code>我尝试用<code>Mac</code>版本的<code>Visual Studio</code>,但是官方上面好像写的是测试版本；而且<code>Mac</code>版本的主打<code>.net core</code>,对<code>.net MVC</code>并不友好而且对数据库之类的操作不太方便；最主要的是<code>IIS</code>环境。好吧我放弃了<code>Mac</code>版本。<code>what the f**k</code> 安装<code>VMware -&gt;Windows Server 2012-&gt;IIS8 -&gt;Microsoft Visual Studio</code>,😓😓😓忙活了一下午甚至加了个班，创建个<code>.net MVC</code>可以跑起来了。(我没用<code>.net core</code>)的原因主要是客户那边有技术团队在维护微信公众号，用的是<code>.net MVC</code>,我避免有坑，所有我也照旧了。  </p>
+</li>
+<li><p>数据库：此处省略。  </p>
+</li>
+</ul>
+<h3 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h3><p>一名同事加入了，他负责微信端所有的页面，其余的后台和接口我来负责😭😭😭。<br>啪啪啪…<br>啪啪啪…<br>啪啪啪…<br>撞击声伴随着做出东西的快感…<br>此处省略500字…<br>一遍又一遍的调试，终于功夫不负有心人，两个周的时间搞定，内部测试通过用户测试没啥问题，接下来就是调整需求了😆😆😆😆（此处不讲了,甲方还是那个甲方）  </p>
+<p>接下来上效果:  </p>
+<p>后台：<br>.Net<br><img src="/2018/优泌乐PK系统/003.png" alt=""><br><img src="/2018/优泌乐PK系统/004.png" alt=""><br><img src="/2018/优泌乐PK系统/005.png" alt=""><br><img src="/2018/优泌乐PK系统/006.png" alt=""><br><img src="/2018/优泌乐PK系统/007.png" alt=""></p>
+<p>前端:<br><img src="/2018/优泌乐PK系统/008.png" class="width-md"><br><img src="/2018/优泌乐PK系统/009.png" class="width-md"><br><img src="/2018/优泌乐PK系统/010.png" class="width-md"><br><img src="/2018/优泌乐PK系统/011.png" class="width-md"><br><img src="/2018/优泌乐PK系统/012.png" class="width-md"><br><img src="/2018/优泌乐PK系统/013.png" class="width-md"><br><img src="/2018/优泌乐PK系统/014.png" class="width-md"></p>
+<h3 id="难点"><a href="#难点" class="headerlink" title="难点"></a>难点</h3><p>我认为此项目的难点在于PK模块，经过多方查阅资料，也没有找出个所以然来。于是我采取了<code>WebSocket + Timer</code>的方式，这样对于500多用户的应该没什么问题。<code>WebSocket</code> 负责保持和用户通讯，<code>Timer</code>每秒负责循环处理用户的数据。  </p>
+<p>1.首先创建<code>enum PKUserStatus</code> 用来表示用户的几种状态,这个枚举表示从用户链接成功到<code>PK</code>结束的所有状态:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">public enum PKUserStatus</span><br><span class="line">    &#123;</span><br><span class="line">    /**</span><br><span class="line">    *   等待匹配</span><br><span class="line">    */</span><br><span class="line">    WAIT_PAIR = 0,</span><br><span class="line">	</span><br><span class="line">    /**匹配成功，等待客户端确认</span><br><span class="line">     */</span><br><span class="line">    WAIT_PAIR_SUCCESS,</span><br><span class="line">	</span><br><span class="line">    /**匹配失败，可能准备关闭连接</span><br><span class="line">     */</span><br><span class="line">    WAIT_PAIR_FAILURE,</span><br><span class="line">	</span><br><span class="line">    /**客户端已经确认，等待服务端发题</span><br><span class="line">     */</span><br><span class="line">    WAIT_ISSUE,</span><br><span class="line">	</span><br><span class="line">    /**发题</span><br><span class="line">     */</span><br><span class="line">    ISSUE,</span><br><span class="line">	</span><br><span class="line">    /**等待客户端回答</span><br><span class="line">     */</span><br><span class="line">    WAIT_ANSWER,</span><br><span class="line">	</span><br><span class="line">    /**胜利</span><br><span class="line">     */</span><br><span class="line">    WIN,</span><br><span class="line">	</span><br><span class="line">    /**失败</span><br><span class="line">     */</span><br><span class="line">    FAIL,</span><br><span class="line">	</span><br><span class="line">    /**无效</span><br><span class="line">     */</span><br><span class="line">    INVALID,</span><br><span class="line">	</span><br><span class="line">    /**平局</span><br><span class="line">     */</span><br><span class="line">    //DRAW,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.创建<code>User</code>类:基本的用户对象  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public class PKUser</span><br><span class="line">&#123;</span><br><span class="line">    //进入系统时间</span><br><span class="line">    public DateTime connectTime &#123; get; set; &#125;  </span><br><span class="line">    </span><br><span class="line">    //userId</span><br><span class="line">    public int userId &#123; get; set; &#125;  </span><br><span class="line">    </span><br><span class="line">    //用户当前的状态</span><br><span class="line">    private PKUserStatus __status &#123; get; set; &#125;  </span><br><span class="line">    </span><br><span class="line">    //回答题目累计用时</span><br><span class="line">    public int answerTime &#123; get; set; &#125;  </span><br><span class="line">    </span><br><span class="line">    //正在连接的socket</span><br><span class="line">    public WebSocket webSocket &#123; get; set; &#125;  </span><br><span class="line">    </span><br><span class="line">    //...</span><br><span class="line">    根据需要的参数或者方法</span><br><span class="line">    ...//</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3.创建<code>PKContext</code>类:类似于房间的概念，每个<code>PKContext</code>表示一个<code>PK</code>场次</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"> public class PKContext</span><br><span class="line">&#123;</span><br><span class="line">    //当前PK所需要回答的题目</span><br><span class="line">    private List&lt;question_info_vo&gt; questions &#123; get; set; &#125;  </span><br><span class="line">      </span><br><span class="line">    //当前正在回答的题目，回答规则是双方同时获得新题目，如果一方回答完，则会等待另一方回答结</span><br><span class="line">	束才会有新的试题。</span><br><span class="line">    private int currentIndex = 0;</span><br><span class="line"></span><br><span class="line">    //仅支持2人pk,所以这里直接定义了两个user对象</span><br><span class="line">    public PKUser user1 &#123; get; set; &#125;</span><br><span class="line">    public PKUser user2 &#123; get; set; &#125;</span><br><span class="line"></span><br><span class="line">	//获取下一道试题，如果已经为最后一道，则返回null</span><br><span class="line">    public question_info_vo nextQuestion()</span><br><span class="line">    &#123;</span><br><span class="line">        if (currentIndex &lt; questions.Count())</span><br><span class="line">        &#123;</span><br><span class="line">            return questions[currentIndex++];</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //保存pk信息</span><br><span class="line">    private void insertPKInfo()</span><br><span class="line">    &#123;</span><br><span class="line">        //...</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //结算分数</span><br><span class="line">    public void insertUserScore()</span><br><span class="line">    &#123;</span><br><span class="line">    	//...</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //用户答题</span><br><span class="line">    public void answers(PKUser user, Dictionary&lt;string, object&gt; options)</span><br><span class="line">    &#123;</span><br><span class="line">    	//...</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int score(PKUserStatus staus)</span><br><span class="line">    &#123;</span><br><span class="line">    	return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    //...</span><br><span class="line">    其他方法</span><br><span class="line">    ...//</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>4.接下来的流程控制在控制器实现即可:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br></pre></td><td class="code"><pre><span class="line">public class WSChatController : ApiController</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 用户连接池，等待匹配的用户，没有匹配的用户在这里暂存，</span><br><span class="line">     * 最大存活60s，过期后服务器即断开此用户的链接</span><br><span class="line">     */</span><br><span class="line">    private static List&lt;PKUser&gt; USER_POOL = new List&lt;PKUser&gt;();</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 用户pk池，正在进行的pk保存在这里，</span><br><span class="line">     * pk结束后需要移除</span><br><span class="line">     */</span><br><span class="line">    private static List&lt;PKContext&gt; PK_POOL = new List&lt;PKContext&gt;();</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 计时器,每隔1s中会轮询各个状态的用户，同时会向用户发送响应的数据</span><br><span class="line">     * 弊端在于定时可能会不太精确，或者在回调函数里面操作耗时的动作会影响业务流程，</span><br><span class="line">     * 不过对于本系统绰绰有余了</span><br><span class="line">     */</span><br><span class="line">    private static Timer timer = new Timer(new TimerCallback(timerCallback), null, 1000, 1000);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public HttpResponseMessage Get()</span><br><span class="line">    &#123;</span><br><span class="line">        if (HttpContext.Current.IsWebSocketRequest)</span><br><span class="line">        &#123;</span><br><span class="line">            HttpContext.Current.AcceptWebSocketRequest(ProcessWSChat);</span><br><span class="line">        &#125;</span><br><span class="line">        return new HttpResponseMessage(HttpStatusCode.SwitchingProtocols);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private async Task ProcessWSChat(AspNetWebSocketContext arg)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        WebSocket socket = arg.WebSocket;</span><br><span class="line">        int userId = int.Parse(arg.QueryString[&quot;user&quot;].ToString());</span><br><span class="line"></span><br><span class="line">        //...</span><br><span class="line">        此处需要判断userId的有效性，忽略</span><br><span class="line">        ...//</span><br><span class="line"></span><br><span class="line">        try</span><br><span class="line">        &#123;</span><br><span class="line">            //新连接，添加到连接池里</span><br><span class="line">            USER_POOL.Add(new PKUser(/*构造函数*/));</span><br><span class="line"></span><br><span class="line">            while (true)</span><br><span class="line">            &#123;</span><br><span class="line">                if (socket.State == WebSocketState.Open)</span><br><span class="line">                &#123;</span><br><span class="line">                    ArraySegment&lt;byte&gt; buffer = new ArraySegment&lt;byte&gt;(new Byte[2048]);</span><br><span class="line">                    WebSocketReceiveResult result = await socket.ReceiveAsync(buffer, CancellationToken.None);</span><br><span class="line">                    </span><br><span class="line">                    //服务端收到客户端消息后，会继续往下走</span><br><span class="line"></span><br><span class="line">                    try</span><br><span class="line">                    &#123;</span><br><span class="line">                        if (socket.State != WebSocketState.Open)</span><br><span class="line">                        &#123;</span><br><span class="line">                            //判断客户端的状态是否不是链接状态，否则会走断开用户的方法</span><br><span class="line">                            offline(userId);</span><br><span class="line">                            break;</span><br><span class="line">                        &#125;</span><br><span class="line"></span><br><span class="line">                        string userMsg = Encoding.UTF8.GetString(buffer.Array, 0, result.Count);</span><br><span class="line"></span><br><span class="line">                        Dictionary&lt;string, object&gt; json = new JavaScriptSerializer().Deserialize&lt;Dictionary&lt;string, object&gt;&gt;(userMsg);</span><br><span class="line">                        </span><br><span class="line">                        //此处会收集到客户端的json数据，</span><br><span class="line">                        </span><br><span class="line">                        //...</span><br><span class="line">                        根据数据执行相应的操作</span><br><span class="line">                        ...//</span><br><span class="line"></span><br><span class="line">                    &#125;</span><br><span class="line">                    catch (Exception e)</span><br><span class="line">                    &#123;</span><br><span class="line">                        </span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                else</span><br><span class="line">                &#123;</span><br><span class="line">                    //如果用户不是链接状态，执行断开链接方法</span><br><span class="line">                    offline(userId);</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">                </span><br><span class="line">                //让cpu休息100毫秒,对cpu来说100毫秒已经是很长时间了</span><br><span class="line">                Thread.Sleep(100);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        catch (Exception e)</span><br><span class="line">        &#123;</span><br><span class="line">            offline(userId);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     *  定时器回调函数</span><br><span class="line">     */</span><br><span class="line">    private static void timerCallback(Object obj)</span><br><span class="line">    &#123;</span><br><span class="line">       </span><br><span class="line">        Dictionary&lt;string, object&gt; msg_dic = new Dictionary&lt;string, object&gt;();</span><br><span class="line">        string time = timestamp();</span><br><span class="line"></span><br><span class="line">        List&lt;PKUser&gt; removeUser = new List&lt;PKUser&gt;();</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * 处理没有匹配的User</span><br><span class="line">         */</span><br><span class="line">        for (int i = 0; i &lt; USER_POOL.Count(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">        </span><br><span class="line">            //在此处遍历等待匹配的User,可以按照规则进行user匹配，</span><br><span class="line">            //或者移除超时的user,过程忽略</span><br><span class="line">            //还可以在这里给客户端发送自定义心跳包</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         *  处理匹配成功的User </span><br><span class="line">         */</span><br><span class="line">        foreach (PKContext context in PK_POOL)</span><br><span class="line">        &#123;</span><br><span class="line">            if (context.user1.status == PKUserStatus.WAIT_PAIR_SUCCESS)</span><br><span class="line">            //在此处判断正在pk的用户状态，然后执行相应的业务流程即可,过程忽略</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 用户掉线</span><br><span class="line">     */</span><br><span class="line">    private static void offline(int userId)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        //用户断线,</span><br><span class="line">        //需要清空用户数据等操作，比如USER_POOL、PK_POOL</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     *  服务器主动断开链接发送close </span><br><span class="line">     */</span><br><span class="line">    private static ArraySegment&lt;byte&gt; closeBuffer = new ArraySegment&lt;byte&gt;(new byte[2] &#123; 0x88, 0x00 &#125;);</span><br><span class="line">    private static void sendClose(WebSocket socket)</span><br><span class="line">    &#123;</span><br><span class="line">        //socket.CloseAsync(WebSocketCloseStatus.NormalClosure,&quot;websocket closed for server&quot;,CancellationToken.None);</span><br><span class="line">        sendBuffer(socket, closeBuffer);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //...</span><br><span class="line">    其他方法</span><br><span class="line">    ...//</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>写到此处基本上算是对这个系统的核心部分搞明白了（请原谅具体实现没有写出来）,至于别的接口、前端页面、数据库之类的就不叙述了，在简单不过了。<br>最后在吐槽一下这个pk的方案真的是太low了，不过现在跑这个系统基本上没什么问题。如果用户量比较大或者要求更高的话不建议自己写pk对战系统，最好使用商业的服务引擎，比如matchvs就不错哦！</p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+        
+        
+
+
+        
+    </div>
+
+    <div>
+        
+        <div>
+    
+    <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+    
+</div>
+
+        
+    </div>
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    iCloudys
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://icloudys.github.io/2018/优泌乐PK系统/" title=".NetPK系统">https://icloudys.github.io/2018/优泌乐PK系统/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/KSThumbImage/" rel="next" title="KSThumbImage(一)">
+                <i class="fa fa-chevron-left"></i> KSThumbImage(一)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/runtime能做些什么/" rel="prev" title="runtime能做些什么">
+                runtime能做些什么 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div id="container"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+    var gitment = new Gitment({
+      id: (window.location.pathname.length < 50) ? window.location.pathname : "1532787625000",
+      owner: 'iCloudys',
+      repo: 'iCloudys.github.io',
+      oauth: {
+        client_id: '10c26686f47a9fe8e71b',
+        client_secret: 'dad1294de8ba5edcc07b37270ef319550b1e8772'
+      },
+    })
+    gitment.render('container')
+    </script>
+
+ 
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="iCloudys" />
+            
+              <p class="site-author-name" itemprop="name">iCloudys</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/iCloudys" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目简介"><span class="nav-number">1.</span> <span class="nav-text">项目简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需求分析"><span class="nav-number">2.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础设计"><span class="nav-number">3.</span> <span class="nav-text">基础设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发"><span class="nav-number">4.</span> <span class="nav-text">开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#难点"><span class="nav-number">5.</span> <span class="nav-text">难点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结语"><span class="nav-number">6.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">iCloudys</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'iCloudys',
+            repo: 'iCloudys.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'dad1294de8ba5edcc07b37270ef319550b1e8772',
+            
+                client_id: '10c26686f47a9fe8e71b'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
