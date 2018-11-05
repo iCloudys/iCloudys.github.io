@@ -91,49 +91,49 @@
 <meta name="description" content="前言面试的时候面试官问：讲讲对runtime的理解，runtime能做些什么? 我基本上就是回答动态添加属性、添加方法、方法的替换……等网络罗列的一大堆。但是具体怎么做，这个嘛，我也说不出来。基于此，我特地研究了一下runtime.h这个文件，过滤了一下里面所有的方法并且了解基本功能并记录在此。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="runtime能做些什么">
-<meta property="og:url" content="https://icloudys.github.io/2018/runtime能做些什么/index.html">
+<meta property="og:url" content="http://www.icloudy.vip/2018/runtime能做些什么/index.html">
 <meta property="og:site_name" content="iCloudys">
 <meta property="og:description" content="前言面试的时候面试官问：讲讲对runtime的理解，runtime能做些什么? 我基本上就是回答动态添加属性、添加方法、方法的替换……等网络罗列的一大堆。但是具体怎么做，这个嘛，我也说不出来。基于此，我特地研究了一下runtime.h这个文件，过滤了一下里面所有的方法并且了解基本功能并记录在此。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img01.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img02.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img03.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img04.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img05.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img06.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img07.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img08.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img09.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img10.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img11.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img12.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img13.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img14.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img15.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img16.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img17.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img18.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img19.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img20.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img21.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img22.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img23.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img24.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img25.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img26.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img27.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img28.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img29.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img30.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img31.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img33.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img34.png">
-<meta property="og:image" content="https://icloudys.github.io/2018/runtime能做些什么/img32.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img01.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img02.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img03.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img04.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img05.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img06.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img07.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img08.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img09.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img10.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img11.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img12.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img13.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img14.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img15.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img16.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img17.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img18.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img19.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img20.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img21.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img22.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img23.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img24.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img25.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img26.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img27.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img28.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img29.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img30.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img31.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img33.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img34.png">
+<meta property="og:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img32.png">
 <meta property="og:updated_time" content="2018-09-02T11:22:32.935Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="runtime能做些什么">
 <meta name="twitter:description" content="前言面试的时候面试官问：讲讲对runtime的理解，runtime能做些什么? 我基本上就是回答动态添加属性、添加方法、方法的替换……等网络罗列的一大堆。但是具体怎么做，这个嘛，我也说不出来。基于此，我特地研究了一下runtime.h这个文件，过滤了一下里面所有的方法并且了解基本功能并记录在此。">
-<meta name="twitter:image" content="https://icloudys.github.io/2018/runtime能做些什么/img01.png">
+<meta name="twitter:image" content="http://www.icloudy.vip/2018/runtime能做些什么/img01.png">
 
 
 
@@ -163,7 +163,7 @@
 
 
 
-  <link rel="canonical" href="https://icloudys.github.io/2018/runtime能做些什么/"/>
+  <link rel="canonical" href="http://www.icloudy.vip/2018/runtime能做些什么/"/>
 
 
 
@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://icloudys.github.io/2018/runtime能做些什么/">
+    <link itemprop="mainEntityOfPage" href="http://www.icloudy.vip/2018/runtime能做些什么/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="iCloudys">
@@ -593,7 +593,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://icloudys.github.io/2018/runtime能做些什么/" title="runtime能做些什么">https://icloudys.github.io/2018/runtime能做些什么/</a>
+    <a href="http://www.icloudy.vip/2018/runtime能做些什么/" title="runtime能做些什么">http://www.icloudy.vip/2018/runtime能做些什么/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
