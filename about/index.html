@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="iCloudys">
 <meta property="og:description" content="基本信息孔**iOS开发男 | 26岁 | 4年工作经验 | 现居北京183****5620 | m183****5620@163.com  工作经历北京代码澎湃科技有限公司 2017.08 至 今iOS、JAVA、C#、微信小程序、兼顾UI细节调整等   iOS开发工程师    独立开发 负责产品的后期维护   负责业务需求讨论，确定需求范围，完成需求说明及需求分析工作   负责客户端iOS应">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-16T03:17:16.605Z">
+<meta property="og:updated_time" content="2018-11-16T03:42:45.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iCloudys">
 <meta name="twitter:description" content="基本信息孔**iOS开发男 | 26岁 | 4年工作经验 | 现居北京183****5620 | m183****5620@163.com  工作经历北京代码澎湃科技有限公司 2017.08 至 今iOS、JAVA、C#、微信小程序、兼顾UI细节调整等   iOS开发工程师    独立开发 负责产品的后期维护   负责业务需求讨论，确定需求范围，完成需求说明及需求分析工作   负责客户端iOS应">
@@ -491,6 +491,16 @@
 <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 
 <script>
+
+    window.onload = function () {
+        var gitments = document.getElementsByClassName('gitment-root-container');
+        console.log(gitments.length);
+        for(var i = 0;i < gitments.length;i ++){
+            var gitment = gitments[i];
+            gitment.style.display="none";
+        }
+    };
+
     function downloadPDF(){
         bdhtml=window.document.body.innerHTML;  //获取到页面html
         sprnstr="<!--startprint-->";
@@ -549,7 +559,7 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
     var gitment = new Gitment({
-      id: (window.location.pathname.length < 50) ? window.location.pathname : "1542338236609",
+      id: (window.location.pathname.length < 50) ? window.location.pathname : "1542339765722",
       owner: 'iCloudys',
       repo: 'iCloudys.github.io',
       oauth: {
