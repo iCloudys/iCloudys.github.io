@@ -88,17 +88,17 @@
 
 
 
-<meta name="description" content="需求今天收到一个需求，内容是在微信小程序点击按钮后，弹出一个动态生成的图片，并且保存在系统相册里面。在实现过程中遇到一些坑，记录一下。   Canvas动态生成图片第一步先在普通页面实现动态生成图片的功能，先不考虑隐藏等功能。代码如下:wxml:   12345&amp;lt;canvas canvas-id=&amp;quot;shareCanvas&amp;quot; style=&amp;quot;width:&amp;#123;">
+<meta name="description" content="需求今天收到一个需求，内容是在微信小程序点击按钮后，弹出一个动态生成的图片，并且保存在系统相册里面。在实现过程中遇到一些坑，记录一下。   Canvas动态生成图片第一步先在普通页面实现动态生成图片的功能，先不考虑隐藏等功能。代码如下:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小程序隐藏canvas的坑">
 <meta property="og:url" content="http://www.icloudy.vip/2018/小程序隐藏canvas的坑/index.html">
 <meta property="og:site_name" content="iCloudys">
-<meta property="og:description" content="需求今天收到一个需求，内容是在微信小程序点击按钮后，弹出一个动态生成的图片，并且保存在系统相册里面。在实现过程中遇到一些坑，记录一下。   Canvas动态生成图片第一步先在普通页面实现动态生成图片的功能，先不考虑隐藏等功能。代码如下:wxml:   12345&amp;lt;canvas canvas-id=&amp;quot;shareCanvas&amp;quot; style=&amp;quot;width:&amp;#123;">
+<meta property="og:description" content="需求今天收到一个需求，内容是在微信小程序点击按钮后，弹出一个动态生成的图片，并且保存在系统相册里面。在实现过程中遇到一些坑，记录一下。   Canvas动态生成图片第一步先在普通页面实现动态生成图片的功能，先不考虑隐藏等功能。代码如下:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-30T05:46:23.985Z">
+<meta property="og:updated_time" content="2018-11-30T05:48:06.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小程序隐藏canvas的坑">
-<meta name="twitter:description" content="需求今天收到一个需求，内容是在微信小程序点击按钮后，弹出一个动态生成的图片，并且保存在系统相册里面。在实现过程中遇到一些坑，记录一下。   Canvas动态生成图片第一步先在普通页面实现动态生成图片的功能，先不考虑隐藏等功能。代码如下:wxml:   12345&amp;lt;canvas canvas-id=&amp;quot;shareCanvas&amp;quot; style=&amp;quot;width:&amp;#123;">
+<meta name="twitter:description" content="需求今天收到一个需求，内容是在微信小程序点击按钮后，弹出一个动态生成的图片，并且保存在系统相册里面。在实现过程中遇到一些坑，记录一下。   Canvas动态生成图片第一步先在普通页面实现动态生成图片的功能，先不考虑隐藏等功能。代码如下:">
 
 
 
@@ -334,7 +334,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-30T13:46:23+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-30T13:48:06+08:00">
                 2018-11-30
               </time>
             
@@ -384,7 +384,8 @@
 
       
         <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>今天收到一个需求，内容是在微信小程序点击按钮后，弹出一个动态生成的图片，并且保存在系统相册里面。<br>在实现过程中遇到一些坑，记录一下。  </p>
-<h3 id="Canvas动态生成图片"><a href="#Canvas动态生成图片" class="headerlink" title="Canvas动态生成图片"></a>Canvas动态生成图片</h3><p>第一步先在普通页面实现动态生成图片的功能，先不考虑隐藏等功能。<br>代码如下:<br><code>wxml:</code>  </p>
+<h3 id="Canvas动态生成图片"><a href="#Canvas动态生成图片" class="headerlink" title="Canvas动态生成图片"></a>Canvas动态生成图片</h3><p>第一步先在普通页面实现动态生成图片的功能，先不考虑隐藏等功能。<br>代码如下:<br><a id="more"></a></p>
+<p><code>wxml:</code>  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas canvas-id=&quot;shareCanvas&quot; style=&quot;width:&#123;&#123;canvasWidth&#125;&#125;px;height:&#123;&#123;canvasWidth*1.5&#125;&#125;px&quot;&gt;</span><br><span class="line">&lt;/canvas&gt;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">`JS:`</span><br></pre></td></tr></table></figure>
 <p>var canvas = wx.createCanvasContext(‘shareCanvas’)</p>
 <p>canvas.drawImage(‘../../image/share-img.png’,<br>0,<br>0,<br>this.data.canvasWidth,<br>this.data.canvasWidth * 1.5)</p>

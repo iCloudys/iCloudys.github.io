@@ -333,7 +333,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-30T13:46:23+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-30T13:48:06+08:00">
                 2018-11-30
               </time>
             
@@ -368,64 +368,15 @@
 
       
         
-          
-            <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>今天收到一个需求，内容是在微信小程序点击按钮后，弹出一个动态生成的图片，并且保存在系统相册里面。<br>在实现过程中遇到一些坑，记录一下。  </p>
-<h3 id="Canvas动态生成图片"><a href="#Canvas动态生成图片" class="headerlink" title="Canvas动态生成图片"></a>Canvas动态生成图片</h3><p>第一步先在普通页面实现动态生成图片的功能，先不考虑隐藏等功能。<br>代码如下:<br><code>wxml:</code>  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas canvas-id=&quot;shareCanvas&quot; style=&quot;width:&#123;&#123;canvasWidth&#125;&#125;px;height:&#123;&#123;canvasWidth*1.5&#125;&#125;px&quot;&gt;</span><br><span class="line">&lt;/canvas&gt;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">`JS:`</span><br></pre></td></tr></table></figure>
-<p>var canvas = wx.createCanvasContext(‘shareCanvas’)</p>
-<p>canvas.drawImage(‘../../image/share-img.png’,<br>0,<br>0,<br>this.data.canvasWidth,<br>this.data.canvasWidth * 1.5)</p>
-<p>canvas.setTextAlign(‘center’)<br>canvas.setFillStyle(‘#ffffff’)<br>canvas.setFontSize(12)<br>canvas.fillText(“生成的文字”, this.data.canvasWidth <em> 0.5, this.data.canvasWidth </em> 1.26)</p>
-<p>canvas.stroke();<br>canvas.draw()</p>
-<p>wx.canvasToTempFilePath({<br>    canvasId: ‘shareCanvas’,<br>    success: function(res) {<br>      wx.saveImageToPhotosAlbum({<br>        filePath: res.tempFilePath,<br>        success: function(res) {<br>          console.log(res)<br>        },<br>        fail: function(err) {<br>          console.log(err)<br>        }<br>      })<br>    }<br>})<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">以上js代码就是获取`canvas`控件，填充一张图做背景，然后生成文字。  </span><br><span class="line">然后`canvas`生成图片，在成功回调方法里面保存到相册里面。  </span><br><span class="line">以上代码在正常页面内执行没问题。</span><br><span class="line"></span><br><span class="line">### Canvas在自定义组件内  </span><br><span class="line">完成了第一步后，考虑到这个按钮可能在不同的页面。就单独把上面的功能封装成一个组件。  </span><br><span class="line">在普通页面引入组件后，报错`&quot;canvasToTempFilePath: fail canvas is empty&quot;`,</span><br><span class="line">查阅文档后，发现`createCanvasContext``canvasToTempFilePath``saveImageToPhotosAlbum`这三个方法需要传`this`这个参数。</span><br><span class="line">`JS`:</span><br></pre></td></tr></table></figure></p>
-<p>var canvas = wx.createCanvasContext(‘shareCanvas’,this)<br>…<br>wx.canvasToTempFilePath({<br>    canvasId: ‘shareCanvas’,<br>    success: function(res) {<br>      wx.saveImageToPhotosAlbum({<br>        …<br>      },this)<br>    }<br>},this)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">改成这样就可以了。</span><br><span class="line"></span><br><span class="line">### 隐藏 Canvas</span><br><span class="line">现在来解决隐藏`canvas`的问题。在需要的时候才会显示,类似于弹框，后面有个蒙版的样式。</span><br><span class="line">`wxml:`</span><br></pre></td></tr></table></figure></p>
-<view class="root" style="display:"><br><br>  <view class="modal-dialog"><br>    <canvas canvas-id="shareCanvas" style="width:px;height:NaNpx"></canvas><br>  </view>
-
-  <view class="close" bindtap="close"></view><br></view><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这样我们控制`root`就可以控制整个组件的隐藏和显示了。</span><br><span class="line">那么问题来了，保存的图片都是空白的。获取不了`canvas`的内容。如果在显示情况下没问题，当`root`隐藏后就不行了。  </span><br><span class="line">在网上基本查到这两种解决方法：  </span><br><span class="line"></span><br><span class="line">方法一:这种方法模拟器可以，但是在真机上不行，所以这个方法放弃了。</span><br></pre></td></tr></table></figure><br><br><view style="width:0px;height:0px;overflow:hidden;"><br>  <canvas canvas-id="canone"></canvas><br></view><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">方法二: 这种主要是把`canvas`放到无限远的位置，并且设置页面不可滚动。因为我这个是组件，所以不一定哪个页面要用，觉得比较麻烦，放弃。</span><br></pre></td></tr></table></figure><br><br><view style="position:fixed;top:9999999999999rpx;"><br>    <canvas style="width:400px;height:400px;background:#fff;"></canvas><br></view>
-
-<p>“disableScroll”: true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">那么有没有更好的解决方法呢? 我们分析一下，当`root`显示的情况下`canvas`这个没问题，如果`root`先隐藏在显示,`canvas`就会出现问题了。那么我们能不能监听`root`隐藏和显示方法的事件呢？当显示完成后在去使用`canvas`呢？经过一翻搜索后，好像不能监听隐藏显示。  </span><br><span class="line">换个思路：不监听`root`的显示和隐藏，直接用`setTimeout`试试呢?</span><br></pre></td></tr></table></figure></p>
-<p>setTimeout(function() {<br>    var canvas = wx.createCanvasContext(‘shareCanvas’,this)<br>    …<br>    wx.canvasToTempFilePath({<br>        canvasId: ‘shareCanvas’,<br>        success: function(res) {<br>          wx.saveImageToPhotosAlbum({<br>            …<br>          },this)<br>        }<br>    },this)<br>},100)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">延迟0.1秒后在操作`canvas`,😆果然成功了，该死的小程序。</span><br><span class="line"></span><br><span class="line">### Canvas 第一次空白</span><br><span class="line"></span><br><span class="line">测试几次后发现第一次获取的图片还是空白的，而之后就好了。经过研究之后在`canvas.draw()`回调方法里面也是延迟0.1秒后就没问题了。</span><br></pre></td></tr></table></figure></p>
-<p>canvas.draw(false, setTimeout(function() {<br>  wx.canvasToTempFilePath({<br>    …<br>  }, this)<br>}, 100))<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 完整代码</span><br><span class="line"></span><br><span class="line">`JS`:</span><br></pre></td></tr></table></figure></p>
-<p>make: function () {</p>
-<pre><code>  this.setData({
-    show: &apos;&apos;
-  })
-
-  var that = this;
-
-  setTimeout(function () {
-    var canvas = wx.createCanvasContext(&apos;shareCanvas&apos;, that)
-
-    canvas.drawImage(&apos;../../image/share-img.png&apos;,
-      0,
-      0,
-      that.data.canvasWidth,
-      that.data.canvasWidth * 1.5)
-
-    canvas.setTextAlign(&apos;center&apos;)
-    canvas.setFillStyle(&apos;#ffffff&apos;)
-    canvas.setFontSize(12)
-    canvas.fillText(&quot;动态文字&quot;, that.data.canvasWidth * 0.5, that.data.canvasWidth * 1.26)
-
-    canvas.stroke();
-    canvas.draw(false, setTimeout(function () {
-      wx.canvasToTempFilePath({
-        canvasId: &apos;shareCanvas&apos;,
-        success: function (res) {
-          wx.saveImageToPhotosAlbum({
-            filePath: res.tempFilePath,
-            success: function (res) {
-              console.log(res)
-            }
-          }, that)
-        }
-      }, that)
-    }, 100))
-  }, 100)
-}
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">`wxml:`</span><br></pre></td></tr></table></figure>
-<p><view class="root" style="display:"><br>  <view class="modal-dialog"><br>    <canvas canvas-id="shareCanvas" style="width:px;height:NaNpx"></canvas><br>  </view><br></view><br><code>`</code></p>
-
-          
+          <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>今天收到一个需求，内容是在微信小程序点击按钮后，弹出一个动态生成的图片，并且保存在系统相册里面。<br>在实现过程中遇到一些坑，记录一下。  </p>
+<h3 id="Canvas动态生成图片"><a href="#Canvas动态生成图片" class="headerlink" title="Canvas动态生成图片"></a>Canvas动态生成图片</h3><p>第一步先在普通页面实现动态生成图片的功能，先不考虑隐藏等功能。<br>代码如下:<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/小程序隐藏canvas的坑/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
