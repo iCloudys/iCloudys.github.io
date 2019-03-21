@@ -88,17 +88,17 @@
 
 
 
-<meta name="description" content="window.onload = function () {          //初始化基本信息         initBaseInfo();          var gitments = document.getElementsByClassName(&apos;gitment-root-container&apos;);          for(var i = 0;i &amp;lt; gitments.">
+<meta name="description" content="导出到PDF   基本信息孔**  期望工作  iOS开发工程师 | 全职 | 北京     项目经验捏积派(iOS) 2018.02独立开发和发布    这是一款国医堂推拿医师使用的App,医生可以在终端上进行预约、接单、收款、请假或者查看自己的业绩等功能   使用cocoapod管理公有库、和自己的私有库   使用单例设计模式KSClient控制用户登录、用户注销、持久化、用户切换、监">
 <meta property="og:type" content="website">
 <meta property="og:title" content="iCloudys">
 <meta property="og:url" content="http://www.icloudy.vip/about/index.html">
 <meta property="og:site_name" content="iCloudys">
-<meta property="og:description" content="window.onload = function () {          //初始化基本信息         initBaseInfo();          var gitments = document.getElementsByClassName(&apos;gitment-root-container&apos;);          for(var i = 0;i &amp;lt; gitments.">
+<meta property="og:description" content="导出到PDF   基本信息孔**  期望工作  iOS开发工程师 | 全职 | 北京     项目经验捏积派(iOS) 2018.02独立开发和发布    这是一款国医堂推拿医师使用的App,医生可以在终端上进行预约、接单、收款、请假或者查看自己的业绩等功能   使用cocoapod管理公有库、和自己的私有库   使用单例设计模式KSClient控制用户登录、用户注销、持久化、用户切换、监">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-21T09:09:05.518Z">
+<meta property="og:updated_time" content="2019-03-21T09:09:56.284Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iCloudys">
-<meta name="twitter:description" content="window.onload = function () {          //初始化基本信息         initBaseInfo();          var gitments = document.getElementsByClassName(&apos;gitment-root-container&apos;);          for(var i = 0;i &amp;lt; gitments.">
+<meta name="twitter:description" content="导出到PDF   基本信息孔**  期望工作  iOS开发工程师 | 全职 | 北京     项目经验捏积派(iOS) 2018.02独立开发和发布    这是一款国医堂推拿医师使用的App,医生可以在终端上进行预约、接单、收款、请假或者查看自己的业绩等功能   使用cocoapod管理公有库、和自己的私有库   使用单例设计模式KSClient控制用户登录、用户注销、持久化、用户切换、监">
 
 
 
@@ -294,137 +294,7 @@
       <div class="post-body">
         
         
-          <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
-
-<script>
-
-    window.onload = function () {
-
-        //初始化基本信息
-        initBaseInfo();
-
-        var gitments = document.getElementsByClassName('gitment-root-container');
-
-        for(var i = 0;i < gitments.length;i ++){
-            var gitment = gitments[i];
-            gitment.style.display="none";
-        }
-    };
-
-    function downloadPDF(){
-
-        let nameArr = ['孔','令','硕']
-        let phoneArr = ['1','8','3','0','1','1','2','5','6','2','0']
-
-        bdhtml=window.document.body.innerHTML;  //获取到页面html
-        sprnstr="<!--startprint-->";
-        eprnstr="<!--endprint-->"; //找到两个标签
-        prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);
-        prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr)); //切除标签以外的东西
-        window.document.body.innerHTML=prnhtml;
-
-        document.getElementById("孔").innerText = nameArr.join("") 
-        document.getElementById("phone").innerText = phoneArr.join("")
-        document.getElementById("email").innerText = phoneArr.join("")
-        document.getElementById("conversation").parentNode.style.display ="none"
-
-        window.print();
-        window.document.body.innerHTML=bdhtml;//将页面重新改回原始样式
-    }
-
-
-    function initBaseInfo(){
-
-        let currentYear = (new Date).getFullYear()
-
-        let age = currentYear - 1992
-        let experience = currentYear - 2014
-
-        let info = [
-            [
-                {
-                    key:"<span>性</span><span>别:</span>",
-                    value:"男"
-                },
-                {
-                    key:"<span>年</span><span>龄:</span>",
-                    value:"<span>" + age +"</span>"
-                }
-            ],
-            [
-                {
-                    key:"<span>住</span><span>址:</span>",
-                    value:"北京"
-                },
-                {
-                    key:"<span>籍</span><span>贯:</span>",
-                    value:"山东菏泽"
-                }
-            ],
-            [
-                {
-                    key:"<span>电</span><span>话:</span>",
-                    value:"<span id='phone'>183****5620</span>"
-                },
-                {
-                    key:"<span>邮</span><span>箱:</span>",
-                    value:"m<span id='email'>183****5620</span>@163.com"
-                }
-            ],
-            [
-                {
-                    key:"<span>博</span><span>客:</span>",
-                    value:"<a href='http://www.icloudy.vip'>http://www.icloudy.vip</a>"
-                },
-                {
-                    key:"<span>G</span><span>i</span><span>t</span><span>H</span><span>u</span><span>b:</span>",
-                    value:"<a href='https://github.com/iCloudys'>https://github.com/iCloudys</a>"
-                }
-            ],
-            [
-                {
-                    key:"<span>经</span><span>验:</span>",
-                    value:"<span>" + experience +"</span>年"
-                },
-                {
-                    key:"<span>交</span><span>流:</span>",
-                    value:"<a href='http://wpa.qq.com/msgrd?v=3&uin=2832909561&site=qq&menu=yes'>QQ在线</a>"
-                }
-            ]
-        ]
-
-        let div = document.getElementById("base-info");
-        let innerHtml = '';
-
-        for(var row = 0;row < info.length;row ++){
-
-            let rowData = info[row];
-            innerHtml += "<div class='row'>";
-
-            for(var col = 0;col < rowData.length;col ++){
-
-                let colData = rowData[col];
-                if(col == rowData.length - 1){
-                    innerHtml += "<div class='col' id='conversation'>";
-                }else{
-                    innerHtml += "<div class='col'>";
-                }
-
-
-                innerHtml += "<div class='base-key'>" + colData.key + "</div>";
-                innerHtml += "<div class='base-value'>" + colData.value + "</div>";
-                innerHtml += "</div>";
-            }
-
-            innerHtml += "</div>";
-        }
-        div.innerHTML = innerHtml
-    }
-
-
-</script>
-
-<div style="text-align:right;"><br>    <a onclick="downloadPDF()" style="color:#428bca;border-bottom: 1px solid #428bca;">导出到PDF</a><br></div>
+          <div style="text-align:right;"><br>    <a onclick="downloadPDF()" style="color:#428bca;border-bottom: 1px solid #428bca;">导出到PDF</a><br></div>
 
 <!--startprint-->
 <h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><h4 id="孔"><a href="#孔" class="headerlink" title="孔**"></a>孔**</h4><blockquote><div class="base-info" id="base-info"></div></blockquote>
@@ -726,6 +596,136 @@
 </ul>
 </blockquote>
 <!--endprint-->
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+
+<script>
+
+    window.onload = function () {
+
+        //初始化基本信息
+        initBaseInfo();
+
+        var gitments = document.getElementsByClassName('gitment-root-container');
+
+        for(var i = 0;i < gitments.length;i ++){
+            var gitment = gitments[i];
+            gitment.style.display="none";
+        }
+    };
+
+    function downloadPDF(){
+
+        let nameArr = ['孔','令','硕']
+        let phoneArr = ['1','8','3','0','1','1','2','5','6','2','0']
+
+        bdhtml=window.document.body.innerHTML;  //获取到页面html
+        sprnstr="<!--startprint-->";
+        eprnstr="<!--endprint-->"; //找到两个标签
+        prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);
+        prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr)); //切除标签以外的东西
+        window.document.body.innerHTML=prnhtml;
+
+        document.getElementById("孔").innerText = nameArr.join("") 
+        document.getElementById("phone").innerText = phoneArr.join("")
+        document.getElementById("email").innerText = phoneArr.join("")
+        document.getElementById("conversation").parentNode.style.display ="none"
+
+        window.print();
+        window.document.body.innerHTML=bdhtml;//将页面重新改回原始样式
+    }
+
+
+    function initBaseInfo(){
+
+        let currentYear = (new Date).getFullYear()
+
+        let age = currentYear - 1992
+        let experience = currentYear - 2014
+
+        let info = [
+            [
+                {
+                    key:"<span>性</span><span>别:</span>",
+                    value:"男"
+                },
+                {
+                    key:"<span>年</span><span>龄:</span>",
+                    value:"<span>" + age +"</span>"
+                }
+            ],
+            [
+                {
+                    key:"<span>住</span><span>址:</span>",
+                    value:"北京"
+                },
+                {
+                    key:"<span>籍</span><span>贯:</span>",
+                    value:"山东菏泽"
+                }
+            ],
+            [
+                {
+                    key:"<span>电</span><span>话:</span>",
+                    value:"<span id='phone'>183****5620</span>"
+                },
+                {
+                    key:"<span>邮</span><span>箱:</span>",
+                    value:"m<span id='email'>183****5620</span>@163.com"
+                }
+            ],
+            [
+                {
+                    key:"<span>博</span><span>客:</span>",
+                    value:"<a href='http://www.icloudy.vip'>http://www.icloudy.vip</a>"
+                },
+                {
+                    key:"<span>G</span><span>i</span><span>t</span><span>H</span><span>u</span><span>b:</span>",
+                    value:"<a href='https://github.com/iCloudys'>https://github.com/iCloudys</a>"
+                }
+            ],
+            [
+                {
+                    key:"<span>经</span><span>验:</span>",
+                    value:"<span>" + experience +"</span>年"
+                },
+                {
+                    key:"<span>交</span><span>流:</span>",
+                    value:"<a href='http://wpa.qq.com/msgrd?v=3&uin=2832909561&site=qq&menu=yes'>QQ在线</a>"
+                }
+            ]
+        ]
+
+        let div = document.getElementById("base-info");
+        let innerHtml = '';
+
+        for(var row = 0;row < info.length;row ++){
+
+            let rowData = info[row];
+            innerHtml += "<div class='row'>";
+
+            for(var col = 0;col < rowData.length;col ++){
+
+                let colData = rowData[col];
+                if(col == rowData.length - 1){
+                    innerHtml += "<div class='col' id='conversation'>";
+                }else{
+                    innerHtml += "<div class='col'>";
+                }
+
+
+                innerHtml += "<div class='base-key'>" + colData.key + "</div>";
+                innerHtml += "<div class='base-value'>" + colData.value + "</div>";
+                innerHtml += "</div>";
+            }
+
+            innerHtml += "</div>";
+        }
+        div.innerHTML = innerHtml
+    }
+
+
+</script>
+
 <style>
     .base-info{
         margin-left:15px;
@@ -800,7 +800,7 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
     var gitment = new Gitment({
-      id: (window.location.pathname.length < 50) ? window.location.pathname : "1553159345545",
+      id: (window.location.pathname.length < 50) ? window.location.pathname : "1553159396300",
       owner: 'iCloudys',
       repo: 'iCloudys.github.io',
       oauth: {
