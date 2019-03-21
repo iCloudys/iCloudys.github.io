@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="iCloudys">
 <meta property="og:description" content="导出到PDF   基本信息孔**  期望工作  iOS开发工程师 | 全职 | 北京     项目经验捏积派(iOS) 2018.02独立开发和发布    这是一款国医堂推拿医师使用的App,医生可以在终端上进行预约、接单、收款、请假或者查看自己的业绩等功能   使用cocoapod管理公有库、和自己的私有库   使用单例设计模式KSClient控制用户登录、用户注销、持久化、用户切换、监">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-21T09:20:18.826Z">
+<meta property="og:updated_time" content="2019-03-21T10:08:01.207Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iCloudys">
 <meta name="twitter:description" content="导出到PDF   基本信息孔**  期望工作  iOS开发工程师 | 全职 | 北京     项目经验捏积派(iOS) 2018.02独立开发和发布    这是一款国医堂推拿医师使用的App,医生可以在终端上进行预约、接单、收款、请假或者查看自己的业绩等功能   使用cocoapod管理公有库、和自己的私有库   使用单例设计模式KSClient控制用户登录、用户注销、持久化、用户切换、监">
@@ -595,6 +595,57 @@
 <li>具有良好的沟通能力，善于与他人相处，富有团队合作能力，对工作富有激情，认真负责  </li>
 </ul>
 </blockquote>
+<style>
+
+    .base-info{
+        margin-left:15px;
+    }
+
+    .row{
+        display: -webkit-flex;
+        display:flex;
+        width:100%;
+        padding:6px 0;
+    }
+
+    .col{
+        display: -webkit-flex;
+        display:flex;
+        width:50%;
+    }
+
+    .base-key{
+        display: -webkit-flex;
+        display:flex;
+        justify-content:space-between;
+        min-width:60px;
+    }
+
+    .base-value{
+        margin-left:10px;
+    }
+
+    .total_plan{
+        background:#eee;
+        height:8px;
+        width:100%;
+        position:relative;
+        display:inline-block;
+        border-radius:4px;
+        overflow:hidden;
+    }
+
+    .current_plan{
+        height:100%;
+        position:absolute;
+        display:inline-block;
+        background: #00b88d;
+        left:0;
+        top:0;
+    }
+
+</style>
+
 <!--endprint-->
 <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 
@@ -624,13 +675,14 @@
         let eprnstr="<!--endprint-->"; //找到两个标签
         let prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);
         prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr)); //切除标签以外的东西
+
         window.document.body.innerHTML=prnhtml;
 
         document.getElementById("孔").innerText = nameArr.join("") 
         document.getElementById("phone").innerText = phoneArr.join("")
         document.getElementById("email").innerText = phoneArr.join("")
-        document.getElementById("conversation").parentNode.style.display ="none"
-
+        document.getElementById("conversation").style.display ="none"
+        console.log(document.getElementById("conversation"))
         window.print();
         window.document.body.innerHTML=bdhtml;//将页面重新改回原始样式
     }
@@ -707,7 +759,7 @@
             for(var col = 0;col < rowData.length;col ++){
 
                 let colData = rowData[col];
-                if(col == rowData.length - 1){
+                if(row == info.length - 1 && col == rowData.length - 1){
                     innerHtml += "<div class='col' id='conversation'>";
                 }else{
                     innerHtml += "<div class='col'>";
@@ -727,56 +779,6 @@
 
 
 </script>
-
-<style>
-    .base-info{
-        margin-left:15px;
-    }
-
-    .row{
-        display: -webkit-flex;
-        display:flex;
-        width:100%;
-        padding:6px 0;
-    }
-
-    .col{
-        display: -webkit-flex;
-        display:flex;
-        width:50%;
-    }
-
-    .base-key{
-        display: -webkit-flex;
-        display:flex;
-        justify-content:space-between;
-        min-width:60px;
-    }
-
-    .base-value{
-        margin-left:10px;
-    }
-
-    .total_plan{
-        background:#eee;
-        height:8px;
-        width:100%;
-        position:relative;
-        display:inline-block;
-        border-radius:4px;
-        overflow:hidden;
-    }
-
-    .current_plan{
-        height:100%;
-        position:absolute;
-        display:inline-block;
-        background: #00b88d;
-        left:0;
-        top:0;
-    }
-
-</style>
 
         
       </div>
@@ -802,7 +804,7 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
     var gitment = new Gitment({
-      id: (window.location.pathname.length < 50) ? window.location.pathname : "1553160018862",
+      id: (window.location.pathname.length < 50) ? window.location.pathname : "1553162881214",
       owner: 'iCloudys',
       repo: 'iCloudys.github.io',
       oauth: {
