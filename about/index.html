@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="iCloudys">
 <meta property="og:description" content="导出到PDF   基本信息孔**  期望工作  iOS开发工程师 | 全职 | 北京     项目经验捏积派(iOS) 2018.02独立开发和发布    这是一款国医堂推拿医师使用的App,医生可以在终端上进行预约、接单、收款、请假或者查看自己的业绩等功能   使用cocoapod管理公有库、和自己的私有库   使用单例设计模式KSClient控制用户登录、用户注销、持久化、用户切换、监">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-21T10:08:01.207Z">
+<meta property="og:updated_time" content="2019-03-27T10:31:01.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iCloudys">
 <meta name="twitter:description" content="导出到PDF   基本信息孔**  期望工作  iOS开发工程师 | 全职 | 北京     项目经验捏积派(iOS) 2018.02独立开发和发布    这是一款国医堂推拿医师使用的App,医生可以在终端上进行预约、接单、收款、请假或者查看自己的业绩等功能   使用cocoapod管理公有库、和自己的私有库   使用单例设计模式KSClient控制用户登录、用户注销、持久化、用户切换、监">
@@ -440,6 +440,7 @@
 <li>后期负责和客户沟通维护  </li>
 </ul>
 </blockquote>
+<!--endprint-->
 <h4 id="微信飞机大战-iOS"><a href="#微信飞机大战-iOS" class="headerlink" title="微信飞机大战(iOS)"></a><a href="https://github.com/iCloudys/PlaneWar" target="_blank" rel="noopener">微信飞机大战(iOS)</a></h4><blockquote>
 <p>2017.09-2017.09<br>独立开发  </p>
 <ul>
@@ -491,6 +492,7 @@
 <li>实现远程推送，可以技术推送新闻等  </li>
 </ul>
 </blockquote>
+<!--startprint-->
 <h3 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h3><h4 id="北京代码澎湃科技有限公司"><a href="#北京代码澎湃科技有限公司" class="headerlink" title="北京代码澎湃科技有限公司"></a>北京代码澎湃科技有限公司</h4><blockquote>
 <p>2017.08 至 今<br>iOS、JAVA、VUE、C#、微信小程序、兼顾UI细节调整等  </p>
 <p>iOS开发工程师  </p>
@@ -595,6 +597,17 @@
 <li>具有良好的沟通能力，善于与他人相处，富有团队合作能力，对工作富有激情，认真负责  </li>
 </ul>
 </blockquote>
+<style media="print">
+    h1,h2,h3,h4,h5,div,li,span,a,p{
+        font-family: STSong;
+    }
+
+    li{
+        line-height:20px;
+    }
+
+</style>
+
 <style>
 
     .base-info{
@@ -669,12 +682,24 @@
 
         let nameArr = ['孔','令','硕']
         let phoneArr = ['1','8','3','0','1','1','2','5','6','2','0']
+        let sprnstrArr = ['<','!','-','-','s','t','a','r','t','p','r','i','n','t','-','-','>']
+        let eprnstrArr = ['<','!','-','-','e','n','d','p','r','i','n','t','-','-','>']
 
         let bdhtml=window.document.body.innerHTML;  //获取到页面html
-        let sprnstr="<!--startprint-->";
-        let eprnstr="<!--endprint-->"; //找到两个标签
-        let prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);
-        prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr)); //切除标签以外的东西
+        let backupbd = bdhtml
+        let sprnstr = sprnstrArr.join("");
+        let eprnstr = eprnstrArr.join(""); //找到两个标签
+        let prnhtml = ""
+        do {
+
+            bdhtml = bdhtml.substr(bdhtml.indexOf(sprnstr)+17);
+
+            prnhtml += bdhtml.substring(0,bdhtml.indexOf(eprnstr)); 
+
+        }while(bdhtml.indexOf(sprnstr) != -1)
+
+        console.log(prnhtml)
+
 
         window.document.body.innerHTML=prnhtml;
 
@@ -684,7 +709,7 @@
         document.getElementById("conversation").style.display ="none"
         console.log(document.getElementById("conversation"))
         window.print();
-        window.document.body.innerHTML=bdhtml;//将页面重新改回原始样式
+        window.document.body.innerHTML=backupbd;//将页面重新改回原始样式
     }
 
 
@@ -804,7 +829,7 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
     var gitment = new Gitment({
-      id: (window.location.pathname.length < 50) ? window.location.pathname : "1553162881214",
+      id: (window.location.pathname.length < 50) ? window.location.pathname : "1553682661673",
       owner: 'iCloudys',
       repo: 'iCloudys.github.io',
       oauth: {
